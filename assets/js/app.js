@@ -1,16 +1,8 @@
 let chartIsActive = true;
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        responsive:{
-            0:{
-                items:1
-            }
-        }
-    })
-  });
+
+function onCarouselChange(el, chart){
+    
+}
 $(window).scroll(() => {
   if ($(window).scrollTop() + 500 >= $(".bars").offset().top) {
     if (chartIsActive) {
@@ -139,6 +131,17 @@ $(window).scroll(() => {
           },
         },
       });
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        autoplay: true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    })
     }
     if (chartIsActive) chartIsActive = false;
   }
