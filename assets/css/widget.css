@@ -2,6 +2,22 @@
 /*======================== manhood WIDGET CSS =========================*/
 /* sidebar css */
 /* serch widget */
+
+.bars{
+    padding: 50px 60px; 
+}
+.bars p{
+    color: #fff;
+}
+.bars h4{
+    color: white;
+    text-align: center;
+}
+.bars canvas{
+    background-color: #ebeada;
+    padding: 20px;
+    border-radius: 10px;
+}
  .blog-left-side {
 }
 .blog-left-side > div {
