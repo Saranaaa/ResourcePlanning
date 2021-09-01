@@ -4,7 +4,7 @@
 /* serch widget */
 
 .bars{
-    padding: 50px 60px; 
+    padding: 10px 60px; 
 }
 .bars p{
     color: #fff;
@@ -17,6 +17,13 @@
     background-color: #ebeada;
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
+}
+div[class*="chart"]{
+    margin-bottom: 60px;
+}
+.owl-stage{
+    
 }
  .blog-left-side {
 }

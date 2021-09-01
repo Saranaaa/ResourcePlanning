@@ -1,10 +1,24 @@
 let chartIsActive = true;
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    })
+  });
 $(window).scroll(() => {
   if ($(window).scrollTop() + 500 >= $(".bars").offset().top) {
     if (chartIsActive) {
-      $(".bars .col-4.chart1 h4").before(
+      let title = $(".bars .chart1").attr("title");
+      $(".bars .chart1").append(
         '<canvas id="myChart1" width="400" height="400">'
       );
+      $(".bars .chart1 canvas").after(`<h4>${title}</h4>`);
       var ctx1 = document.getElementById("myChart1");
       var myChart = new Chart(ctx1, {
         type: "bar",
@@ -51,28 +65,30 @@ $(window).scroll(() => {
           },
         },
       });
-      $(".bars .col-4.chart2 h4").before(
-        '<canvas id="myChart2" width="400" height="400">'
+
+      title = $(".bars .chart2").attr("title");
+      $(".bars .chart2").append(
+        '<canvas id="myChart2" width="400" ght="400">'
       );
-      var ctx1 = document.getElementById("myChart2");
-      var myChart = new Chart(ctx1, {
+      $(".bars .chart2 canvas").after(`<h4>${title}</h4>`);
+
+      var ctx2 = document.getElementById("myChart2");
+      var myChart = new Chart(ctx2, {
         type: "pie",
         data: {
-            labels: [
-                'Red',
-                'Blue',
-                'Yellow'
+          labels: ["Red", "Blue", "Yellow"],
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [300, 50, 100],
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
               ],
-              datasets: [{
-                label: 'My First Dataset',
-                data: [300, 50, 100],
-                backgroundColor: [
-                  'rgb(255, 99, 132)',
-                  'rgb(54, 162, 235)',
-                  'rgb(255, 205, 86)'
-                ],
-                hoverOffset: 4
-              }]
+              hoverOffset: 4,
+            },
+          ],
         },
         options: {
           animations: {
@@ -86,33 +102,32 @@ $(window).scroll(() => {
           },
         },
       });
-      $(".bars .col-4.chart3 h4").before(
-        '<canvas id="myChart3" width="400" height="400">'
+     
+      title = $(".bars .chart3").attr("title");
+      $(".bars .chart3").append(
+        '<canvas id="myChart3" width="400" ght="400">'
       );
+      $(".bars .chart3 canvas").after(`<h4>${title}</h4>`);
       var ctx3 = document.getElementById("myChart3");
       var myChart = new Chart(ctx3, {
         type: "doughnut",
         data: {
-        
-                labels: [
-                    'Red',
-                    'Blue',
-                    'Yellow'
-                  ],
-                  datasets: [{
-                    label: 'My First Dataset',
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                      'rgb(255, 99, 132)',
-                      'rgb(54, 162, 235)',
-                      'rgb(255, 205, 86)'
-                    ],
-                    hoverOffset: 4
-                  }]
+          labels: ["Red", "Blue", "Yellow"],
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [300, 50, 100],
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
+              ],
+              hoverOffset: 4,
             },
-        
+          ],
+        },
+
         options: {
-            
           animations: {
             tension: {
               duration: 1000,
@@ -125,7 +140,7 @@ $(window).scroll(() => {
         },
       });
     }
-    if(chartIsActive) chartIsActive=false;
+    if (chartIsActive) chartIsActive = false;
   }
   console.log($(window).scrollTop());
 });
