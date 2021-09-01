@@ -1,8 +1,5 @@
 let chartIsActive = true;
 
-function onCarouselChange(el, chart){
-    
-}
 $(window).scroll(() => {
   if ($(window).scrollTop() + 500 >= $(".bars").offset().top) {
     if (chartIsActive) {
@@ -59,9 +56,7 @@ $(window).scroll(() => {
       });
 
       title = $(".bars .chart2").attr("title");
-      $(".bars .chart2").append(
-        '<canvas id="myChart2" width="400" ght="400">'
-      );
+      $(".bars .chart2").append('<canvas id="myChart2" width="400" ght="400">');
       $(".bars .chart2 canvas").after(`<h4>${title}</h4>`);
 
       var ctx2 = document.getElementById("myChart2");
@@ -94,11 +89,9 @@ $(window).scroll(() => {
           },
         },
       });
-     
+
       title = $(".bars .chart3").attr("title");
-      $(".bars .chart3").append(
-        '<canvas id="myChart3" width="400" ght="400">'
-      );
+      $(".bars .chart3").append('<canvas id="myChart3" width="400" ght="400">');
       $(".bars .chart3 canvas").after(`<h4>${title}</h4>`);
       var ctx3 = document.getElementById("myChart3");
       var myChart = new Chart(ctx3, {
@@ -131,19 +124,34 @@ $(window).scroll(() => {
           },
         },
       });
-      $('.owl-carousel').owlCarousel({
-        loop:true,
+      $(".owl-carousel").owlCarousel({
+        loop: true,
         autoplay: true,
-        margin:10,
-        nav:false,
-        responsive:{
-            0:{
-                items:1
-            }
-        }
-    })
+        margin: 10,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+        },
+      });
     }
     if (chartIsActive) chartIsActive = false;
   }
   console.log($(window).scrollTop());
+//   $(".nav_scroll a").each((i, e) => {
+//     $(e).on("click", function () {
+//       $(this).parent().siblings().find("a").removeClass("active");
+//       $(this).addClass("active");
+//     });
+//   });
+});
+
+$(() => {
+  $(".nav_scroll a").each((i, e) => {
+    $(e).on("click", function () {
+      $(this).parent().siblings().find("a").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
 });

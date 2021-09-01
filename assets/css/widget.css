@@ -2,9 +2,14 @@
 /*======================== manhood WIDGET CSS =========================*/
 /* sidebar css */
 /* serch widget */
-
+html{
+    scroll-behavior: smooth;
+}
+.nav_scroll a.active,.nav_scroll a:hover {
+    border-bottom: 1px solid white;
+}
 .bars{
-    padding: 10px 60px; 
+    padding: 10px 0px; 
 }
 .bars p{
     color: #fff;
