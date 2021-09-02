@@ -1038,7 +1038,7 @@ html {
 .nav_scroll a:hover {
   border-bottom: 1px solid white;
 }
-.logo .logo_img {
+/* .logo .logo_img {
   background: #f1f1f1;
   height: 200px;
   width: 200px;
@@ -1055,15 +1055,17 @@ html {
   position: absolute;
   left: 0;
   top: 60px;
-}
-.techno_nav_manu.sticky .main_sticky {
+} */
+.techno_nav_manu.sticky .main_sticky,
+.logo .logo_img {
   display: inline-block;
   height: 88px;
   padding: 0 5%;
   position: absolute;
   top: 0;
 }
-.techno_nav_manu.sticky .main_sticky::after {
+.techno_nav_manu.sticky .main_sticky::after,
+.logo .logo_img::after {
   content: "";
   display: inline-block;
   width: 0;
@@ -1071,10 +1073,11 @@ html {
   border-style: solid;
   position: absolute;
   right: -109px;
-  border-width: 88px 134px 0 0 ;
-  border-color: #ffffff transparent transparent transparent ;
+  border-width: 88px 134px 0 0;
+  border-color: #ffffff transparent transparent transparent;
 }
-.techno_nav_manu.sticky .main_sticky::before {
+.techno_nav_manu.sticky .main_sticky::before,
+.logo .logo_img::before {
   content: "";
   display: inline-block;
   width: 0;
@@ -1085,7 +1088,8 @@ html {
   border-width: 0 0 88px 134px;
   border-color: transparent transparent #ffffff transparent;
 }
-.logo .main_sticky img {
+.logo .main_sticky img,
+.logo .logo_img img {
   /* width: 100%; */
   height: 100%;
   padding: 3% 5%;
@@ -5380,7 +5384,8 @@ a.em-active-button:hover {
   margin-top: -108px;
 }
 .nav-tabs .nav-item {
-  margin: 0 5px;
+  /* margin: 0 5px; */
+  flex: 19%;
 }
 .nav-tabs .nav-link {
   border: 1px solid #0c5adb !important;
@@ -5388,6 +5393,10 @@ a.em-active-button:hover {
   padding: 22px 50px;
   font-size: 20px;
   color: #fff;
+  margin: 0 5px;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 .nav-tabs .nav-item.active .nav-link {
   border: 1px solid #fff !important;
@@ -5402,9 +5411,13 @@ a.em-active-button:hover {
   display: block;
   text-align: center;
   padding-bottom: 5px;
+  margin-bottom: 20px;
+
 }
 .tab_thumb img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .tab_content_title h4 {
   font-weight: 700;
@@ -6015,10 +6028,8 @@ a.em-active-button:hover {
 --<	Techno Footer Middle Area Css -->
 ======================================================*/
 .footer-bottom-logo img {
-    height: 60px;
+  height: 60px;
 }
-
-
 
 .footer-middle {
   background-repeat: no-repeat;
