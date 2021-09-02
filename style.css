@@ -6014,27 +6014,12 @@ a.em-active-button:hover {
 /*====================================================
 --<	Techno Footer Middle Area Css -->
 ======================================================*/
-.footer-bottom-logo {
-    display: flex;
+.footer-bottom-logo img {
+    height: 60px;
 }
-.footer-bottom-logo .text{
-    margin-left: 27px;
-}
-.footer-bottom-logo .text h5{
-    color: #ffffff!important;
-    font-weight: 400;
-}
-.footer-bottom-logo .img-box{
-    height: 80px;
-    width: 80px;
-    background-color: #ffffff;
-    transform: rotate(45deg);
-    border-radius: 12px;
-}
-.footer-bottom-logo img{
-    height: 100%;
-    transform: rotate(-45deg);
-}
+
+
+
 .footer-middle {
   background-repeat: no-repeat;
   background-position: center center;

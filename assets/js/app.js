@@ -138,13 +138,28 @@ $(window).scroll(() => {
     }
     if (chartIsActive) chartIsActive = false;
   }
-  console.log($(window).scrollTop());
-//   $(".nav_scroll a").each((i, e) => {
-//     $(e).on("click", function () {
-//       $(this).parent().siblings().find("a").removeClass("active");
-//       $(this).addClass("active");
-//     });
-//   });
+
+  if($(window).scrollTop() + 80 <= $("#about").offset().top && $(window).scrollTop()+90>=  $("#home").offset().top ){
+    $(".nav_scroll a.active").removeClass("active");
+    $(".nav_scroll a[href='#home']").addClass("active");
+  }
+  if($(window).scrollTop() + 80 <= $("#service").offset().top && $(window).scrollTop()+90>=  $("#about").offset().top){
+    $(".nav_scroll a.active").removeClass("active");
+    $(".nav_scroll a[href='#about']").addClass("active");
+  }
+  if($(window).scrollTop() + 80 <= $("#faq").offset().top && $(window).scrollTop()+90>=  $("#service").offset().top){
+    $(".nav_scroll a.active").removeClass("active");
+    $(".nav_scroll a[href='#service']").addClass("active");
+  }
+  if($(window).scrollTop() + 80 <= $("#contact").offset().top && $(window).scrollTop()+90>=  $("#faq").offset().top){
+    $(".nav_scroll a.active").removeClass("active");
+    $(".nav_scroll a[href='#faq']").addClass("active");
+  }
+  if($(window).scrollTop() + 80 <= $(".footer-middle").offset().top && $(window).scrollTop()+90>=  $("#contact").offset().top){
+    $(".nav_scroll a.active").removeClass("active");
+    $(".nav_scroll a[href='#contact']").addClass("active");
+  }
+  
 });
 
 $(() => {
