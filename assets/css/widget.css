@@ -2,34 +2,7 @@
 /*======================== manhood WIDGET CSS =========================*/
 /* sidebar css */
 /* serch widget */
-html{
-    scroll-behavior: smooth;
-}
-.nav_scroll a.active,.nav_scroll a:hover {
-    border-bottom: 1px solid white;
-}
-.bars{
-    padding: 10px 0px; 
-}
-.bars p{
-    color: #fff;
-}
-.bars h4{
-    color: white;
-    text-align: center;
-}
-.bars canvas{
-    background-color: #ebeada;
-    padding: 20px;
-    border-radius: 10px;
-    height: 100%;
-}
-div[class*="chart"]{
-    margin-bottom: 60px;
-}
-.owl-stage{
-    
-}
+
  .blog-left-side {
 }
 .blog-left-side > div {
