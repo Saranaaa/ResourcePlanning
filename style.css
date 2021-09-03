@@ -5536,8 +5536,32 @@ a.em-active-button:hover {
 .accordion p, .accordion ul{
   margin-left: 20px;
 }
+.accordion .card-header{
+  position: relative;
+}
+.accordion .card-body{
+  color: #0d1218;
+}
+.accordion .card-header button{
+  font-weight: 700;
+  font-size: 18px;
+  color: #00247e;
+}
 .accordion [data-target*="heading"]:not(.open){
   display: none;
+}
+.accordion [id*="heading"]::after{
+  content: "+";
+  display: inline-block;
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  color:  #00247e;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.accordion [id*="heading"].open-head::after{
+  content: "-";
 }
 .acd-items.acd-arrow {
   margin-left: 160px;

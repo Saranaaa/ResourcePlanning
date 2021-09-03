@@ -201,7 +201,15 @@ $(() => {
       if(!$(data).hasClass("open")){
         $(".open").removeClass("open").slideUp();
         $(data).slideToggle();
-        data.addClass("open")
+        data.addClass("open");
+        $(".open-head").removeClass("open-head")
+        $(e).addClass("open-head");
+      }
+      else {
+        $(".open").removeClass("open").slideUp();
+        $(data).slideUp();
+        $(".open-head").removeClass("open-head")
+
       }
     })
   })
