@@ -1576,10 +1576,10 @@ a.em-active-button:hover {
   font-weight: 500;
 }
 .em_bar {
-  background: #9b50db none repeat scroll 0 0;
+  /* background: #9b50db none repeat scroll 0 0; */
   height: 2px;
   margin: 0 auto 5px;
-  width: 62px;
+  width: 100%;
 }
 .text_left .em_bar {
   margin: 0;
@@ -5421,6 +5421,11 @@ a.em-active-button:hover {
 }
 .tab_content_title h4 {
   font-weight: 700;
+  font-size: 35px;
+}
+.tab_content_text p{
+  font-size: 20px;
+  line-height: 1.7;
 }
 .tab_content_sub_text ul {
   display: block;
@@ -5527,6 +5532,12 @@ a.em-active-button:hover {
 ======================================================*/
 .main-accordion-lt {
   background: #2d2d2d;
+}
+.accordion p, .accordion ul{
+  margin-left: 20px;
+}
+.accordion [data-target*="heading"]:not(.open){
+  display: none;
 }
 .acd-items.acd-arrow {
   margin-left: 160px;

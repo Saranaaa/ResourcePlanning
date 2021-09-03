@@ -156,7 +156,7 @@ $(window).scroll(() => {
     if (chartIsActive) chartIsActive = false;
   }
 
-  
+
   if (
     $(window).scrollTop() + 80 <= $("#about").offset().top &&
     $(window).scrollTop() + 90 >= $("#home").offset().top
@@ -195,6 +195,17 @@ $(window).scroll(() => {
 });
 
 $(() => {
+  $(".accordion .card .card-header").each((i,e)=>{
+    $(e).click(()=>{
+      let data = $(`.accordion [data-target="${e.id}"]`);
+      if(!$(data).hasClass("open")){
+        $(".open").removeClass("open").slideUp();
+        $(data).slideToggle();
+        data.addClass("open")
+      }
+    })
+  })
+
   $(".nav_scroll a").each((i, e) => {
     $(e).on("click", function () {
       $(this).parent().siblings().find("a").removeClass("active");
