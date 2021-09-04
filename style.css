@@ -6069,18 +6069,17 @@ a.em-active-button:hover {
   background-position: center center;
   background-size: cover;
   background: #111a3a;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: #fff;
+  text-align: center;
 }
 .footer-middle .menu {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-bottom: 15px;
   color: #fff;
-  /* font-size: 22px;
-  margin-bottom: 30px; */
-
 }
 .footer-middle .menu li{
   margin-left: 15px;
