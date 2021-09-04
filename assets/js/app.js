@@ -105,11 +105,11 @@ let chart3 = {
 
 
 function loadChart(chartBox, chartId, chart) {
-  let title = $(`.bars ${chartBox}`).attr("title");
+  // let title = $(`.bars ${chartBox}`).attr("title");
   $(`.bars ${chartBox}`).append(
-    `<canvas id="${chartId}" width="400" height="400">`
+    `<canvas id="${chartId}" width="100" height="100">`
   );
-  $(`.bars ${chartBox} canvas`).after(`<h4>${title}</h4>`);
+  // $(`.bars ${chartBox} canvas`).after(`<h4>${title}</h4>`);
   var ctx = document.getElementById(chartId);
   new Chart(ctx, {
     type: chart.type,
@@ -123,7 +123,7 @@ $(window).scroll(() => {
     if (chartIsActive) {
       $(".owl-carousel").owlCarousel({
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         margin: 10,
         nav: false,
         responsive: {
@@ -132,23 +132,33 @@ $(window).scroll(() => {
           },
         },
         onInitialized: () => {
-          loadChart(".owl-item.active .chart1", "myChart1", chart1);
+          loadChart(".owl-item.active .chart2-1", "myChart2", chart2);
+          loadChart(".owl-item.active .chart2-2", "myChart1", chart1);
+          loadChart(".owl-item.active .chart2-3", "myChart3", chart1);
+          loadChart(".owl-item.active .chart2-4", "myChart4", chart3);
         },
         onTranslated: (e) => {
-          console.log(e.item.index);
+
+          $('div[class*="chart"]').empty();
+
           if (e.item.index == 3) {
-            $(".bars .chart2").empty();
-            loadChart(".owl-item.active .chart2", "myChart2", chart2);
+            loadChart(".owl-item.active .chart2-1", "myChart2", chart2);
+            loadChart(".owl-item.active .chart2-2", "myChart1", chart1);
+            loadChart(".owl-item.active .chart2-3", "myChart3", chart1);
+            loadChart(".owl-item.active .chart2-4", "myChart4", chart3);
           }
           if (e.item.index == 4) {
-            $(".bars .chart3").empty();
-            loadChart(".owl-item.active .chart3", "myChart3", chart3);
+            loadChart(".owl-item.active .chart2-1", "myChart2", chart2);
+            loadChart(".owl-item.active .chart2-2", "myChart1", chart1);
+            loadChart(".owl-item.active .chart2-3", "myChart3", chart1);
+            loadChart(".owl-item.active .chart2-4", "myChart4", chart3);
           }
 
           if (e.item.index == 2 || e.item.index == 5) {
-            $(".bars .chart1").empty();
-            loadChart(".owl-item.active .chart1", "myChart1", chart1, "bar");
-
+            loadChart(".owl-item.active .chart2-1", "myChart2", chart2);
+            loadChart(".owl-item.active .chart2-2", "myChart1", chart1);
+            loadChart(".owl-item.active .chart2-3", "myChart3", chart1);
+            loadChart(".owl-item.active .chart2-4", "myChart4", chart3);
           }
         },
       });

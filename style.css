@@ -1106,10 +1106,8 @@ html {
   text-align: center;
 }
 .bars canvas {
-  background-color: #ebeada;
-  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;  padding: 20px;
   border-radius: 10px;
-  height: 100%;
 }
 div[class*="chart"] {
   margin-bottom: 60px;
@@ -6071,12 +6069,14 @@ a.em-active-button:hover {
   background-position: center center;
   background-size: cover;
   background: #111a3a;
-  padding-top: 200px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.widget-title {
+.footer-middle .widget-title {
   color: #fff;
   font-size: 22px;
+  margin-bottom: 30px;
+
 }
 .company-info-desc p {
   color: #fff;
