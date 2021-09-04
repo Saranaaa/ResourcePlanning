@@ -6071,12 +6071,23 @@ a.em-active-button:hover {
   background: #111a3a;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-.footer-middle .widget-title {
   color: #fff;
-  font-size: 22px;
-  margin-bottom: 30px;
+}
+.footer-middle .menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  /* font-size: 22px;
+  margin-bottom: 30px; */
 
+}
+.footer-middle .menu li{
+  margin-left: 15px;
+}
+.footer-middle .menu a{
+  color: #fff;
+  margin-right: 15px;
 }
 .company-info-desc p {
   color: #fff;
